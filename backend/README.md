@@ -258,17 +258,17 @@ The request body should be a JSON object containing the following fields:
 ### Example Response
 
 - `captain` (object):
-  -`fullname` (object).
-  -`firstname` (string): Captain's first name (minimum 3 characters).
-  -`lastname` (string): Captain's first name (minimum 3 characters).
-  -`email` (string): Captain's email address (must be a valid email).
-  -`password` (string): Captain's password (minimum 6 characters).
-  -`vehicle` (object)
-    -`color` (string): Vehicle color.
-    -`plate` (string): Vehicle plate number.
-    -`capacity` (number): Vehicle passenger capacity.
-    -`vehicleType` (string): Type of vehicle.
-    
+  - `fullname` (object).
+    - `firstname` (string): Captain's first name (minimum 3 characters).
+    - `lastname` (string): Captain's first name (minimum 3 characters).
+  - `email` (string): Captain's email address (must be a valid email).
+  - `password` (string): Captain's password (minimum 6 characters).
+- `vehicle` (object)
+    - `color` (string): Vehicle color.
+    - `plate` (string): Vehicle plate number.
+    - `capacity` (number): Vehicle passenger capacity.
+    - `vehicleType` (string): Type of vehicle.
+
 -`token` (String): JWT Token
 
 
