@@ -153,3 +153,82 @@ Example:
 
 ### Notes
 - Ensure that the `Content-Type` header is set to `application/json` when making the request.
+
+# User Profile Endpoint
+
+## GET /users/profile
+
+### Description
+This endpoint is used to retrieve the profile of the currently authenticated user.
+
+### Request Headers
+- `Authorization`: Bearer token of the authenticated user (required)
+
+### Responses
+
+#### Success
+- **Status Code**: 200 OK
+- **Response Body**: A JSON object containing the user details.
+
+Example:
+```json
+{
+  "_id": "user_id_here",
+  "fullname": {
+    "firstname": "John",
+    "lastname": "Doe"
+  },
+  "email": "john.doe@example.com"
+}
+```
+
+#### Authentication Errors
+- **Status Code**: 401 Unauthorized
+- **Response Body**: A JSON object containing an error message.
+
+Example:
+```json
+{
+  "message": "Authentication required"
+}
+```
+
+### Notes
+- Ensure that the `Authorization` header is set to `Bearer <token>` when making the request.
+
+# User Logout Endpoint
+
+## GET /users/logout
+
+### Description
+This endpoint is used to log out the currently authenticated user.
+
+### Request Headers
+- `Authorization`: Bearer token of the authenticated user (required)
+
+### Responses
+
+#### Success
+- **Status Code**: 200 OK
+- **Response Body**: A JSON object containing a success message.
+
+Example:
+```json
+{
+  "message": "Logged out successfully"
+}
+```
+
+#### Authentication Errors
+- **Status Code**: 401 Unauthorized
+- **Response Body**: A JSON object containing an error message.
+
+Example:
+```json
+{
+  "message": "Authentication required"
+}
+```
+
+### Notes
+- Ensure that the `Authorization` header is set to `Bearer <token>` when making the request.
