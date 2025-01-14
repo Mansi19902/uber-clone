@@ -232,3 +232,45 @@ Example:
 
 ### Notes
 - Ensure that the `Authorization` header is set to `Bearer <token>` when making the request.
+
+# Captain Registration Endpoint
+
+## POST /captains/register
+
+### Description
+This endpoint is used to register a new captain. It requires the captain's first name, last name, email, password, and vehicle details.
+
+### Request Body
+The request body should be a JSON object containing the following fields:
+- `fullname`: An object containing:
+  - `firstname`: The captain's first name (minimum 3 characters, required)
+  - `lastname`: The captain's last name (minimum 3 characters, optional)
+- `email`: The captain's email address (must be a valid email, required)
+- `password`: The captain's password (minimum 6 characters, required)
+- `vehicle`: An object containing:
+  - `color`: The vehicle's color (minimum 3 characters, required)
+  - `plate`: The vehicle's plate number (minimum 3 characters, required)
+  - `capacity`: The vehicle's capacity (minimum 1, required)
+  - `vehicleType`: The type of vehicle (must be one of 'car', 'motorcycle', 'auto', required)
+
+
+
+### Example Response
+
+- `captain` (object):
+  -`fullname` (object).
+  -`firstname` (string): Captain's first name (minimum 3 characters).
+  -`lastname` (string): Captain's first name (minimum 3 characters).
+  -`email` (string): Captain's email address (must be a valid email).
+  -`password` (string): Captain's password (minimum 6 characters).
+  -`vehicle` (object)
+    -`color` (string): Vehicle color.
+    -`plate` (string): Vehicle plate number.
+    -`capacity` (number): Vehicle passenger capacity.
+    -`vehicleType` (string): Type of vehicle.
+    
+-`token` (String): JWT Token
+
+
+
+   
